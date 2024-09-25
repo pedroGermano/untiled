@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { GridContainer } from "../GridContainer";
+import { AreaCtas } from "./AreaCtas";
 import { TagFeature } from "./TagFeature";
 
 export function SectionHero() {
@@ -7,15 +9,18 @@ export function SectionHero() {
       <GridContainer>
         <div className="text-center">
           <TagFeature />
-          <h1 className="text-6xl font-semibold text-gray-900">
+          <h1 className="text-6xl font-semibold text-gray-900 mt-4 mb-6">
             Beautiful analytics to grow smarter
           </h1>
-          <p>
+          <p className="text-xl/6 text-gray-600 max-w-3xl mx-auto mb-12">
             Powerful, self-serve product and growth analytics to help you
             convert, engage, and retain more users. Trusted by over 4,000
             startups.
           </p>
+          <AreaCtas />
         </div>
+        <Image src="/macbook.svg" width={1216} height={48} alt="macbook" />
+        <hr className="border-gray-200" />
       </GridContainer>
     </section>
   );
